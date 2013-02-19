@@ -6,10 +6,10 @@ Goal: Creation of a joke comprising 2 sentences in the following structure.
 	The second sentence contains noun, verb and object related to the topic of the first sentence.
 
 Algorithm:
-	Sentence Grabber fetches and returns sentence from open website (e.g. WIKI, news page, etc.)
-	Grammar Utility Module extracts list of nouns from fetched sentence
-	Topic Recognition Module returns list of associated topics related to passed noun sorted by frequency in descending order
-	Joke Generator Module fetches sentence based on passed topic.
+	-Sentence Grabber fetches and returns sentence from open website (e.g. WIKI, news page, etc.)
+	-Grammar Utility Module extracts list of nouns from fetched sentence
+	-Topic Recognition Module returns list of associated topics related to passed noun sorted by frequency in descending order
+	-Joke Generator Module fetches sentence based on passed topic.
 		
 		
 Pseudo Code:
