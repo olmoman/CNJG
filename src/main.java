@@ -6,7 +6,12 @@ public class main {
 	 */
 	public static void main(String[] args) {
 		
-		System.out.print("Test!");
+		System.out.println("Test!");
+		
+		SentenceGrabber sentenceGrabber = new SentenceGrabber();
+		String firstSentence = sentenceGrabber.getSentence();
+		System.out.println(firstSentence);
+
 		
 		/*
 		 * 
