@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class main {
 
@@ -6,12 +7,18 @@ public class main {
 	 */
 	public static void main(String[] args) {
 		
-		System.out.println("Test!");
+		System.out.print("maxMemory: ");
+		System.out.print(java.lang.Runtime.getRuntime().maxMemory()); 
+		System.out.println(" (make sure this value is greater than 256MB!)");
 		
 		SentenceGrabber sentenceGrabber = new SentenceGrabber();
 		String firstSentence = sentenceGrabber.getSentence();
 		System.out.println(firstSentence);
 
+		GrammarUtility grammarUtil = new GrammarUtility();
+		List<String> EntityList = grammarUtil.getNamedEntityList(firstSentence);
+		System.out.println(EntityList.toString());
+		
 		
 		/*
 		 * 
