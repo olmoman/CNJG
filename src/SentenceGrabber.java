@@ -21,6 +21,7 @@ public class SentenceGrabber {
 	private String sourceURLPath = "http://en.wikipedia.org/wiki/Portal:Contents/Quick_index";
 	private String sourceDomain = "http://en.wikipedia.org";
 	
+	
 	/**
 	 * Method that randomly selects a sentence from a randomly selected article on 
 	 * Wikipedia.
