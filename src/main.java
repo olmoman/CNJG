@@ -17,8 +17,10 @@ public class main {
 
 		GrammarUtility grammarUtil = new GrammarUtility();
 		List<String> EntityList = grammarUtil.getNamedEntityList(firstSentence);
-		System.out.println(EntityList.toString());
 		
+		// Replace first entity with "Chuck Norris"
+		firstSentence = grammarUtil.replaceNoun(firstSentence, EntityList.get(0));
+		System.out.println(firstSentence);
 		
 		/*
 		 * 

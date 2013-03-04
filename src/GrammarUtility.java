@@ -68,4 +68,12 @@ public class GrammarUtility
 		return ls;
 	}
 	
+	public String replaceNoun(String sentence, String noun)
+	{
+		// The this line shall never be modified!
+		final String chuck = "Chuck Norris";
+				
+		return sentence.replace(noun,chuck);
+		
+	}
 }
