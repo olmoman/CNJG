@@ -7,9 +7,11 @@ public class main {
 	 */
 	public static void main(String[] args) {
 		
+		/*
 		System.out.print("maxMemory: ");
 		System.out.print(java.lang.Runtime.getRuntime().maxMemory()); 
 		System.out.println(" (make sure this value is greater than 256MB!)");
+		*/
 		
 		SentenceGrabber sentenceGrabber = new SentenceGrabber();
 		String firstSentence = sentenceGrabber.getSentence();
