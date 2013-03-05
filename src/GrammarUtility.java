@@ -27,22 +27,22 @@ import java.io.IOException;
 public class GrammarUtility 
 {
 	private String serializedClassifier;
+	private AbstractSequenceClassifier<CoreLabel> classifier;
 	
 	public GrammarUtility()
 	{
 		// Use classifier CoNLL 2003 (trained for 4 classes: PERSON, ORGANIZATION, LOCATION, and MISC)
 		serializedClassifier = "lib/english.conll.4class.distsim.crf.ser.gz";
 		
+		// Instance classifier
+		classifier = CRFClassifier.getClassifierNoExceptions(serializedClassifier);
+		 
 	}
 	
 	public List<String> getNamedEntityList(String sentence)
 	{
 		List<String> ls = new ArrayList<String>();
 		
-
-		// Instance classifier
-		AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifierNoExceptions(serializedClassifier);
-		 
 		// System.out.println(classifier.classifyToString(sentence));
 		
 		// Classify passed sentence

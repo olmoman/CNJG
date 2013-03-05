@@ -14,15 +14,25 @@ public class main {
 		*/
 		
 		SentenceGrabber sentenceGrabber = new SentenceGrabber();
-		String firstSentence = sentenceGrabber.getSentence();
-		System.out.println(firstSentence);
-
 		GrammarUtility grammarUtil = new GrammarUtility();
-		List<String> EntityList = grammarUtil.getNamedEntityList(firstSentence);
 		
-		// Replace first entity with "Chuck Norris"
-		firstSentence = grammarUtil.replaceNoun(firstSentence, EntityList.get(0));
-		System.out.println(firstSentence);
+		int maxJokes = 10;
+		
+		for (int i=0;i<maxJokes;i++)
+		{
+			String firstSentence = sentenceGrabber.getSentence();
+			//System.out.println(firstSentence);
+			
+			List<String> EntityList = grammarUtil.getNamedEntityList(firstSentence);
+			//System.out.println("Found these entities: " + EntityList.toString());
+			
+			// Replace first entity with "Chuck Norris"
+			if (!EntityList.isEmpty())
+			{
+				firstSentence = grammarUtil.replaceNoun(firstSentence, EntityList.get(0));
+				System.out.println(firstSentence);
+			}
+		}
 		
 		/*
 		 * 
